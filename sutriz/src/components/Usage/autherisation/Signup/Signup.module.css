@@ -1,0 +1,59 @@
+.rootDiv{
+    height: 90vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+#logo{
+    height: 60px;
+    width: 60px;
+
+}
+#container{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-around;
+    height: 500px;
+    flex-shrink: 0;
+
+}
+#container div{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+input:focus{
+    outline: none;  
+}
+
+#imgbox{
+    height: 400px;
+    width:400px;
+}
+
+@media only screen and (max-width:1000px) {
+    #imgbox{
+        display: none;
+    }
+    #container{
+        align-items: center;
+        justify-content: center;
+    }
+}
+#Signup{
+        border: none;
+        height: 40px;
+        background-color: #FFB462;
+        border-radius: 5px;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+}
+#Signup:hover{
+    background-color: #f3922b;
+    
+}

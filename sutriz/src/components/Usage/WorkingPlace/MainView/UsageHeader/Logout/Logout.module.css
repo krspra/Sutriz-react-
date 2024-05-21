@@ -1,0 +1,17 @@
+#logout{
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    right: 2vw;
+    height: 40px;
+    width: 80px;
+    background-color: #f3922b;
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+#logout:hover{
+    background-color: rgb(255, 174, 0);
+}

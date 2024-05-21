@@ -1,0 +1,18 @@
+.getStarted {
+    height: 50px;
+    width: 120px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f3922b;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+  }
+  
+  .getStarted:hover {
+    background-color: rgb(255, 174, 0);
+    color: white; /* Apply different background color on hover */
+  }
+  

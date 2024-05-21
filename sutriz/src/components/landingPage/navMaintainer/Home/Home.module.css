@@ -1,0 +1,27 @@
+#Home {
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #f7ce68 100%);
+  height: 800px;
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  justify-content:space-around;
+  
+}
+
+#textBox{
+    height: 300px;
+    width:500px;
+    font-size: 65px;
+    font-weight: bolder;
+    text-align: left;
+    position: relative;
+    top: 40px;
+    left: 5%;
+    color: rgba(0, 0, 0, 0.915);
+    
+}
+img{
+    height: 300px;
+    width:500px
+}

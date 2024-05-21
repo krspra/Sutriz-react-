@@ -1,0 +1,15 @@
+.otherMethods {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border: 1px solid #e0dfdc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.otherMethods:hover{
+    background-color:#F0F0F0
+}

@@ -1,0 +1,22 @@
+a{
+    font-size: 20px;
+    color: #000000bc;
+    text-decoration: none;
+}
+#logIn{
+    color:#000000bc;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px; 
+}
+a:hover{
+    color:#f3922b;
+}
+#logIn:hover{
+    color:#f3922b;
+}
+
+
+
+
+

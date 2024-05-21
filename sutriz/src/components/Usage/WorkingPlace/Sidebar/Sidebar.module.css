@@ -1,0 +1,58 @@
+#container{
+    height: 95%;
+    width:20%;
+    border: 1px solid #dadae4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+#sutrizlogo{
+    height: 50px;
+    width:50px
+}
+
+#ulOne{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.things{
+    height: 40px;
+    width: 90%;
+    text-align: left;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #727277;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+
+#ulTwo{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid rgba(176, 170, 170, 0.311);
+}
+.things:hover{
+    background-color: rgba(243, 160, 5, 0.201);
+    cursor: pointer;
+}
+
+.thingsOnActive{
+    background-color: rgba(243, 160, 5, 0.201);
+    color: orange;
+}
+
