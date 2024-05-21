@@ -32,7 +32,7 @@ const Quiz = () => {
           flexWrap:"wrap"
         }}
       >
-        <img id={styles.subjectImg} src={item.imgUrl} alt={item.subject} />
+        <img id={styles.subjectImg} src={item.imgUrl} alt={item.subject}/>
       </div>
 
       <div

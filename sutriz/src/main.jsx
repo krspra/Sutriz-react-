@@ -20,6 +20,10 @@ import Physics from "./components/Usage/WorkingPlace/Physics/Physics.jsx";
 import Chemistry from "./components/Usage/WorkingPlace/Chemistry/Chemistry.jsx";
 import MathChapter from "./components/Usage/WorkingPlace/Math/MathChapter/MathChapter.jsx";
 import MathIndex from "./components/Usage/WorkingPlace/Math/MathIndex/MathIndex.jsx";
+import PhysicsChapter from "./components/Usage/WorkingPlace/Physics/PhysicsChapter/PhysicsChapter.jsx";
+import PhysicsIndex from "./components/Usage/WorkingPlace/Physics/PhysicsIndex/PhysicsIndex.jsx";
+import ChemistryChapter from "./components/Usage/WorkingPlace/Chemistry/ChemistryChapter/ChemistryChapter.jsx";
+import ChemistryIndex from "./components/Usage/WorkingPlace/Chemistry/ChemistryIndex/ChemistryIndex.jsx";
 
 const token = localStorage.getItem("token");
 
@@ -60,12 +64,22 @@ const router = createBrowserRouter([
                 path: "Math",
                 element: <Math />,
                 children: [
-                  { path: ":mathchapter", element: <MathChapter /> },
+                  { path: ":mathChapter", element: <MathChapter /> },
                   { path: "", element: <MathIndex /> },
                 ],
               },
-              { path: "Physics", element: <Physics /> },
-              { path: "Chemistry", element: <Chemistry /> },
+              {
+                path: "Physics",
+                element: <Physics />,
+                children: [
+                  {path: ":physicsChapter", element: <PhysicsChapter /> },
+                  {path:"",element:<PhysicsIndex/>}
+                ],
+              },
+              { path: "Chemistry", element: <Chemistry />,children:[
+                {path:":chemistryChapter",element:<ChemistryChapter/>},
+                {path:"",element:<ChemistryIndex/>}
+              ] },
             ],
           },
           //{path:"Login",element:<Login/>}

@@ -1,9 +1,10 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Chemistry = () => {
   return (
-    <div style={{height:"100%",width:"75%",flexShrink:"0"}}>Chemistry</div>
-  )
+    <Outlet/>
+  );
 }
 
-export default Chemistry
+export default Chemistry;

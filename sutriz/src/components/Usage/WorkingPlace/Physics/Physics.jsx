@@ -1,9 +1,10 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Physics = () => {
   return (
-    <div style={{height:"100%",width:"75%",flexShrink:"0"}}>Physics</div>
+    <Outlet/>
   )
 }
 
-export default Physics
+export default Physics;
