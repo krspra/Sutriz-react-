@@ -154,19 +154,21 @@ const Chapter = ({Subject,Chapter}) => {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-around",
+                  gap:"10px"
                 }}
               >
                 <div
-                  style={{ color: "#000000a0", height: "5%" }}
+                  style={{ color: "#000000a0", height: "25px" }}
                 >{`Question${currentQuestion}`}</div>
                 <div
-                  style={{ height: "13%", fontSize: "20px", flexShrink: "0" }}
+                  style={{minHeight:"40px",fontSize: "20px", flexShrink: "0" }}
                 >
+                  {questionData.imageSrc?<img style={{height:"80px",width:"200px"}} src={questionData.imageSrc}/>:""}
                   <MathJax dynamic>{questionData.Question}</MathJax>
                 </div>
                 <div
                   style={{
-                    height: "65%",
+                    height: "280px",
                     width: "100%",
                     display: "flex",
                     flexDirection: "column",
@@ -200,8 +202,8 @@ const Chapter = ({Subject,Chapter}) => {
                 <div
                   style={{
                     border: "1px solid #DADAE4",
-                    height: "15%",
-                    width: "100%",
+                    minHeight: "65px",
+                    width: "99.5%",
                     borderRadius: "15px",
                     display: "flex",
                     justifyContent: "space-around",
