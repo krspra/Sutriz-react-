@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         element: token ? (
           <Navigate to="/usage/workingsection" />
         ) : (
-          <Landing title="Sutriz-One Stop Solution of Formulas Revision" />
+          <Landing/>
         ),
         children: [
           { path: "/", element: <Home /> }, //{path:"Aboutus",element:<Aboutus/>}
@@ -52,12 +52,12 @@ const router = createBrowserRouter([
             element: token ? (
               <Navigate to="/usage/workingsection" />
             ) : (
-              <Signup title="Signup to Sutriz" />
+              <Signup />
             ),
           },
           {
             path: "WorkingSection",
-            element: <WorkingSection title="Formulas Quiz-JEE & NEET" />,
+            element: <WorkingSection/>,
             children: [
               { path: "", element: <MainView /> },
               {
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
                   { path: "", element: <MathIndex /> },
                 ],
               },
-              {
+                        {
                 path: "Physics",
                 element: <Physics />,
                 children: [
@@ -76,8 +76,8 @@ const router = createBrowserRouter([
                   {path:"",element:<PhysicsIndex/>}
                 ],
               },
-              { path: "Chemistry", element: <Chemistry />,children:[
-                {path:":chemistryChapter",element:<ChemistryChapter/>},
+              { path: "Chemistry", element: <Chemistry  />,children:[
+                {path:":chemistryChapter",element:<ChemistryChapter />},
                 {path:"",element:<ChemistryIndex/>}
               ] },
             ],

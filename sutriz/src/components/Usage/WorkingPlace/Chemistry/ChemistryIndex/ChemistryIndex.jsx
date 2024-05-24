@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LiaFlaskSolid } from "react-icons/lia";
 import Index from "../../Subject/Index/Index";
+import { Helmet } from "react-helmet";
 
 const ChemistryIndex = () => {
   return (
-    <Index
-      Subject="Chemistry"
-      Image={<LiaFlaskSolid style={{ color: "orange" }} />}
-    />
+    <>
+      <Helmet>
+        <title>Chemistry Formulas QUIZ</title>
+      </Helmet>
+      <Index
+        Subject="Chemistry"
+        Image={<LiaFlaskSolid style={{ color: "orange" }} />}
+      />
+    </>
   );
-
-}
+};
 
 export default ChemistryIndex;

@@ -24,9 +24,6 @@ function App() {
         let userPhotoUrl = user.photoURL;
         updateData({ userPhotoUrl, userName });
       }
-      else{
-        navigate("/");
-      }
     });
   }, [user]);
 

@@ -1,27 +1,28 @@
 import React from "react";
 import Sidebar from "./Sidebar/Sidebar";
-import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
-const WorkingSection = ({ title }) => {
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
-
+const WorkingSection = () => {
   return (
-    <div
-      style={{
-        height: "100%",
-        width: "100%",
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center",
-        flexShrink: "0",
-      }}
-    >
-      <Sidebar />
-      <Outlet />
-    </div>
+    <>
+      <Helmet>
+        <title>Formulas Quiz-JEE & NEET</title>
+      </Helmet>
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          flexShrink: "0",
+        }}
+      >
+        <Sidebar />
+        <Outlet />
+      </div>
+    </>
   );
 };
 

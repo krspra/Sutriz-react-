@@ -2,7 +2,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-const Usage = ({ title, user }) => {
+const Usage = () => {
   return (
     <>
     <Outlet/>
