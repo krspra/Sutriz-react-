@@ -1,6 +1,7 @@
 import React from "react";
 import { getAuth } from "firebase/auth";
 import styles from "./Logout.module.css";
+import { RiLogoutCircleRLine } from "react-icons/ri";
 
 const Logout = () => {
 
@@ -16,7 +17,7 @@ const Logout = () => {
 
   return (
     <a href="/" id={styles.logout} onClick={handleLogOut}> 
-      Logout
+     <RiLogoutCircleRLine /> Logout
     </a>
   );
 };

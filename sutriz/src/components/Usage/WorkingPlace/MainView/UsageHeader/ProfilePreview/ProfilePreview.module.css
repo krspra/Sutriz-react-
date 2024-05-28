@@ -1,0 +1,14 @@
+#container{
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+@media (max-width:700px) {
+    #container{
+        position: relative;
+        right: 7vw;
+    }
+    
+}
