@@ -6,7 +6,7 @@ const FZFerror = () => {
   return (
     <div style={{display:"flex",alignItems:"center",flexDirection:"column"}}>
       <h1 style={{ color: "#FFBC5E",textAlign:"center"}}>PAGE NOT FOUND</h1>
-      <img
+      <img style={{height:"300px"}}
         src={FZFimage}
         alt="PAGE NOT FOUND....Please Check The Url You Entered"
       />

@@ -9,12 +9,169 @@ a{
     height: 50px;
     line-height: 50px; 
 }
+
+#navDiv{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: white;
+    z-index: 98;
+}
+#logInForMenu{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #727277ad;
+    border-radius: 10px;
+}
+#sutrizLogoText{
+    height: 60px;
+    width: 120px;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    color: #FFD57F;
+    font-weight: bold;
+}
 a:hover{
     color:#f3922b;
 }
 #logIn:hover{
     color:#f3922b;
 }
+
+#menuButton{
+    display: none;
+    position: relative;
+    top: 8px;
+}
+
+#menu{
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+.things:hover{
+    background-color: rgba(243, 160, 5, 0.201);
+    cursor: pointer;
+}
+#authNav{
+    display: flex;
+    justify-content:center;
+    align-items:space-around;
+    gap: 10px;
+}
+#sutrizlogo{
+    height: 60px;
+    width:60px;
+}
+#ulOne{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.things{
+    height: 40px;
+    width: 90%;
+    text-align: left;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #727277;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+.thingsOnActive{
+    background-color: rgba(243, 160, 5, 0.201);
+    color: orange;
+}
+#smallScreenMenu{
+    position: fixed;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color:white;
+    height: 100%;
+    width: 300px;
+    left: 0px;
+    z-index: 99;
+    flex-shrink: 0;
+    border: 1px solid #00000045;
+    justify-content: space-around;
+    border-radius:0px 20px 20px 0px;
+}
+#smallScreenmenuNotActive{
+    display: none;
+}
+
+@media (max-width: 1072px) {
+    #menuButton{
+        display: block;
+
+    }
+
+    #menu{
+        display: none;
+    }   
+}
+
+@media (max-width:510px) {
+
+    #sutrizlogo{
+        height: 40px;
+        width: 40px;
+    }
+
+    #sutrizLogoText{
+        height: 40px;
+        width: 110px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+}
+@media (max-width:454px) {
+    #authNav{
+        display: none;
+    }
+    
+}
+@media (max-height:430px) {
+    #sutrizlogo{
+        height: 40px;
+        width: 40px;
+    }
+
+    #sutrizLogoText{
+        height: 40px;
+        width: 110px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+}
+
 
 
 

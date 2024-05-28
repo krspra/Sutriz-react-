@@ -15,3 +15,10 @@
 #logout:hover{
     background-color: rgb(255, 174, 0);
 }
+@media (max-width:700px) {
+    #logout{
+        position:relative;
+        left: 6vw;
+    }
+    
+}

@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import styles from "./Getstarted.module.css";
 
 function Getstarted() {
-  return <Link className={styles.getStarted} to="/Usage/Signup">Get Started</Link>;
+  const navigate=useNavigate();
+  return <div onClick={()=>{navigate("/usage/signup")}} className={styles.getStarted}>Get Started</div>;
 }
 
 export default Getstarted;

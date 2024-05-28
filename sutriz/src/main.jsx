@@ -24,6 +24,7 @@ import PhysicsChapter from "./components/Usage/WorkingPlace/Physics/PhysicsChapt
 import PhysicsIndex from "./components/Usage/WorkingPlace/Physics/PhysicsIndex/PhysicsIndex.jsx";
 import ChemistryChapter from "./components/Usage/WorkingPlace/Chemistry/ChemistryChapter/ChemistryChapter.jsx";
 import ChemistryIndex from "./components/Usage/WorkingPlace/Chemistry/ChemistryIndex/ChemistryIndex.jsx";
+import { MenuContextProvider } from "./Context.jsx";
 
 const token = localStorage.getItem("token");
 
@@ -34,11 +35,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: token ? (
-          <Navigate to="/usage/workingsection" />
-        ) : (
-          <Landing/>
-        ),
+        element: token ? <Navigate to="/usage/workingsection" /> : <Landing />,
         children: [
           { path: "/", element: <Home /> }, //{path:"Aboutus",element:<Aboutus/>}
         ],
@@ -57,7 +54,7 @@ const router = createBrowserRouter([
           },
           {
             path: "WorkingSection",
-            element: <WorkingSection/>,
+            element: <WorkingSection />,
             children: [
               { path: "", element: <MainView /> },
               {
@@ -68,18 +65,22 @@ const router = createBrowserRouter([
                   { path: "", element: <MathIndex /> },
                 ],
               },
-                        {
+              {
                 path: "Physics",
                 element: <Physics />,
                 children: [
-                  {path: ":physicsChapter", element: <PhysicsChapter /> },
-                  {path:"",element:<PhysicsIndex/>}
+                  { path: ":physicsChapter", element: <PhysicsChapter /> },
+                  { path: "", element: <PhysicsIndex /> },
                 ],
               },
-              { path: "Chemistry", element: <Chemistry  />,children:[
-                {path:":chemistryChapter",element:<ChemistryChapter />},
-                {path:"",element:<ChemistryIndex/>}
-              ] },
+              {
+                path: "Chemistry",
+                element: <Chemistry />,
+                children: [
+                  { path: ":chemistryChapter", element: <ChemistryChapter /> },
+                  { path: "", element: <ChemistryIndex /> },
+                ],
+              },
             ],
           },
           //{path:"Login",element:<Login/>}
@@ -94,7 +95,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ProfileProvider>
-    <RouterProvider router={router}></RouterProvider>
-  </ProfileProvider>
+  <MenuContextProvider>
+    <ProfileProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </ProfileProvider>
+  </MenuContextProvider>
 );

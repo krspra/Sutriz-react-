@@ -4,8 +4,8 @@ import sutrizlogo from "../../../../assets/sutrizlogo.png";
 import signimg from "./signinvector.svg";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Google from "../google/google";
-import { app } from "../../../../firebaseconfigfile";
 import { Helmet } from "react-helmet";
+import { toast, Bounce } from "react-toastify";
 
 function Signup() {
   const emailData = useRef("");
@@ -16,14 +16,34 @@ function Signup() {
     const password = passwordData.current.value;
 
     if (email === "" || password === "") {
-      alert("Please fill in email and password");
+      toast.warn('Please fill in Email & Password!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+        });
     } else {
       const auth = getAuth();
 
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
-          alert("You have successfully created your account");
+          toast.success("You have successfully created your account",{
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+            theme: "colored",
+            transition: Bounce,
+          });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -60,7 +80,7 @@ function Signup() {
         </div>
 
         <div id={styles.container}>
-          <div style={{ minWidth: "450px" }}>
+          <div style={{ minWidth: "300px",height:"400px" }}>
             <h1 style={{ fontSize: "40px" }}>Sign up</h1>
             <div
               style={{
@@ -76,7 +96,7 @@ function Signup() {
             <div
               style={{
                 height: "50px",
-                width: "450px",
+                width: "100%",
                 textAlign: "center",
                 fontSize: "20px",
               }}
@@ -84,7 +104,7 @@ function Signup() {
               -----OR-----
             </div>
 
-            <div style={{ width: "100%", justifyContent: "space-evenly" }}>
+            <div style={{ width: "100%", justifyContent: "space-evenly",alignItems:"center" }}>
               <div
                 style={{
                   width: "100%",

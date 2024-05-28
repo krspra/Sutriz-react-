@@ -1,0 +1,13 @@
+#container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+@media (max-width:700px) {
+    #container{
+        flex-direction: column;
+    }
+}

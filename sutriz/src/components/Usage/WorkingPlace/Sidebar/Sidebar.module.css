@@ -1,5 +1,5 @@
 #container{
-    height: 95%;
+    height: 95vh;
     width:20%;
     border: 1px solid #dadae4;
     border-radius: 5px;
@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: space-around;
     flex-shrink: 0;
+    min-height: 350px;
 }
 #sutrizlogo{
     height: 50px;
@@ -50,9 +51,58 @@
     background-color: rgba(243, 160, 5, 0.201);
     cursor: pointer;
 }
+.textSutriz{
+    height: fit-content;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: fit-content;
+    color: #FFD57F;
+    font-weight: bold;
+}
 
 .thingsOnActive{
     background-color: rgba(243, 160, 5, 0.201);
     color: orange;
 }
 
+#innerContainer{
+    height:70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+@media (max-width:1030px) and (min-Width:860px) {
+    .things{
+        font-size:16px ;
+    }
+    .textSutriz{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    #sutrizlogo{
+        height: 40px;
+        width:40px
+    }
+}
+@media (max-width:860px) {
+    .things{
+        font-size:12px ;
+        width: 120px;
+    }
+    .textSutriz{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    #sutrizlogo{
+        height: 30px;
+        width:30px
+    }
+    
+}
+@media (max-width:700px) {
+    #container{
+        display: none;
+    }
+}

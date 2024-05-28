@@ -14,6 +14,24 @@ export const ProfileProvider = ({ children }) => {
       {children}
     </ProfileContext.Provider>
   );
-};
+}
 
 export default ProfileContext;
+
+//-------------------------------------------------
+
+export const MenuContext=createContext();
+
+export function MenuContextProvider({children}){
+  const [checkbox,setcheckbox]=useState(false);
+
+  const updateCheckStatus=(newStatus)=>{
+    setcheckbox(newStatus);
+  }
+
+  return(
+    <MenuContext.Provider value={{checkbox,updateCheckStatus}}>
+      {children}
+    </MenuContext.Provider>
+  );
+}

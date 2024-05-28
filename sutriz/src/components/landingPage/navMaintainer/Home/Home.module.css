@@ -6,11 +6,12 @@
   display: flex;
   flex-shrink: 0;
   justify-content:space-around;
-  
 }
-
+.homeBlurred{
+  filter: blur(15px);
+}
 #textBox{
-    height: 300px;
+    height:fit-content;
     width:500px;
     font-size: 65px;
     font-weight: bolder;
@@ -19,9 +20,106 @@
     top: 40px;
     left: 5%;
     color: rgba(0, 0, 0, 0.915);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
     
 }
-img{
+#eduImg{
     height: 300px;
-    width:500px
+    width: 500px;
+    -moz-position:relative;
+    -moz-bottom:50px;
+}
+
+#smallSizeText{
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.674);
+}
+
+@media (min-Width:800px) and (max-width:1053px) {
+  #eduImg{
+    height: 250px;
+    width: 400px;
+  }
+  #textBox{
+    width: 400px;
+    font-size: 50px;
+  }
+  
+}
+
+@media (min-width:616px) and (max-Width:800px) {
+  #eduImg{
+    height: 200px;
+    width: 350px;
+  }
+  #textBox{
+    width: 300px;
+    font-size: 35px;
+  }
+  #smallSizeText{
+    font-size: 15px;
+  }
+}
+
+@media (max-width:616px) {
+  #Home{
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    gap: 15px;
+    
+  }
+  #eduImg{
+    height: 250px;
+    width: 400px;
+  }
+  #textBox{
+    width: 400px;
+    font-size: 50px;
+    position: static;
+    align-items: center;
+  }
+
+}
+@media (max-width:454px) and (min-width:400px) {
+  #Home{
+    flex-direction: column;
+    align-items: center;
+    justify-content:unset;
+    gap: 15px;
+  }
+  #eduImg{
+    height: 200px;
+    width: 350px;
+  }
+  #textBox{
+    width: 350px;
+    font-size: 45px;
+    align-items: center;
+  }
+  
+}
+@media (max-width:400px) {
+  #Home{
+    flex-direction: column;
+    align-items: center;
+    justify-content:unset;
+    gap: 15px;
+  }
+
+  #textBox{
+    width: 300px;
+    font-size: 40px;
+    align-items: center;
+  }
+  #smallSizeText{
+    font-size: 13px;
+  }
+  #eduImg{
+    height: 160px;
+    width: 300px;
+  }
 }

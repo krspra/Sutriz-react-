@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Sidebar.module.css";
 import sutrizlogo from "../../../../assets/sutrizlogo.png";
 import { IoBookmarksOutline } from "react-icons/io5";
@@ -14,60 +14,55 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <div id={styles.container}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexShrink: "0",
-        }}
-      >
-        <img id={styles.sutrizlogo} src={sutrizlogo} alt="Domwor" />
+    <>
+      <div id={styles.container}>
         <div
           style={{
-            height: "40px",
-            fontSize: "40px",
-            lineHeight: "40px",
-            textAlign: "center",
-            width: "120px",
-            color: "#FFD57F",
-            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexShrink: "0",
           }}
         >
-          SUTRIZ
+          <img id={styles.sutrizlogo} src={sutrizlogo} alt="Domwor" />
+          <div
+            className={styles.textSutriz}>
+            SUTRIZ
+          </div>
+        </div>
+
+        <div id={styles.innerContainer}>
+          <ul id={styles.ulOne}>
+            <button
+              onClick={() => navigate("/usage/workingsection")}
+              className={`${styles.things} ${
+                path === "/usage/workingsection" ? styles.thingsOnActive : ""
+              }`}
+            >
+              <FiHome /> Home
+            </button>
+            <button className={styles.things}>
+              <IoBookmarksOutline /> <span>Bookmarks</span> 
+            </button>
+            <button className={styles.things}>
+              <MdOutlineSettingsSuggest /> <span>Suggest Feature</span> 
+            </button>
+            <button className={styles.things}>
+              <CgProfile /> <span>Profile</span>
+            </button>
+          </ul>
+
+          <ul id={styles.ulTwo}>
+            <button className={styles.things}>
+              <MdDarkMode /> <span>Switch to Dark</span> 
+            </button>
+            <button className={styles.things}>
+              <RiLogoutCircleRLine /> <span>Logout</span>
+            </button>
+          </ul>
         </div>
       </div>
-
-      <div style={{ height: "70vh", display: "flex", justifyContent: "space-between", flexDirection: "column", flexShrink: "0" }}>
-        <ul id={styles.ulOne}>
-          <button
-            onClick={() => navigate("/usage/workingsection")}
-            className={`${styles.things} ${path === "/usage/workingsection" ? styles.thingsOnActive : ""}`}
-          >
-            <FiHome /> Home
-          </button>
-          <button className={styles.things}>
-            <IoBookmarksOutline /> Bookmarks
-          </button>
-          <button className={styles.things}>
-            <MdOutlineSettingsSuggest /> Suggest Feature
-          </button>
-          <button className={styles.things}>
-            <CgProfile /> Profile
-          </button>
-        </ul>
-
-        <ul id={styles.ulTwo}>
-          <button className={styles.things}>
-            <MdDarkMode /> Switch to Dark
-          </button>
-          <button className={styles.things}>
-            <RiLogoutCircleRLine /> Logout
-          </button>
-        </ul>
-      </div>
-    </div>
+    </>
   );
 };
 

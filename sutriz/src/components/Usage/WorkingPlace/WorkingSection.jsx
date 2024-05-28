@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import styles from "./WorkingSection.module.css"
 
 const WorkingSection = () => {
   return (
@@ -9,16 +10,7 @@ const WorkingSection = () => {
       <Helmet>
         <title>Formulas Quiz-JEE & NEET</title>
       </Helmet>
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          flexShrink: "0",
-        }}
-      >
+      <div id={styles.container}>
         <Sidebar />
         <Outlet />
       </div>
