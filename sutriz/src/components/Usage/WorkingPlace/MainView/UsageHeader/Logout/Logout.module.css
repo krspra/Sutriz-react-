@@ -16,13 +16,21 @@
     background-color: #ffae00c1;
     gap: 5px;
 }
+#menu{
+    display: none;
+}
 #logout:hover{
     background-color: rgb(255, 174, 0);
 }
 @media (max-width:700px) {
     #logout{
-        position:relative;
-        left: 7vw;
+       display: none;
     }
-    
+    #menu{
+        display: block;
+        position: relative;
+        left: 7vw;
+        height: 40px;
+        width: 40px;
+    }
 }

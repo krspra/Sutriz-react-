@@ -1,6 +1,9 @@
 #logoContForSmallSizeScreen{
     display: none;
 }
+#usageBottomNav{
+    display: none;
+}
 
 @media (max-width:700px) {
     #logoContForSmallSizeScreen{
@@ -11,5 +14,18 @@
         align-items: center;
         position: sticky;
         top: 0px;
-    }    
+    }
+    #usageBottomNav{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        background-color: white;
+        font-size: 30px;
+        justify-content: space-around;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.447);
+        border-top: 1px solid rgba(0, 0, 0, 0.501);
+    }   
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Sidebar.module.css";
 import sutrizlogo from "../../../../assets/sutrizlogo.png";
 import { IoBookmarksOutline } from "react-icons/io5";
