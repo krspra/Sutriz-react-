@@ -6,6 +6,7 @@ import { useContext } from "react";
 import Getstarted from "../../layout/Header/getstarted/Getstarted";
 
 function Home() {
+  // alert("If You're facing any of the UI based problem on our Site. We advise you to open our site in any of the CHROME, SAFARI, BRAVE, EDGE or OPERA browser.")
   const { checkbox,updateCheckStatus } = useContext(MenuContext);
   return (
     <div onClick={()=>{updateCheckStatus(false)}} className={checkbox?styles.homeBlurred:""} id={styles.Home}>

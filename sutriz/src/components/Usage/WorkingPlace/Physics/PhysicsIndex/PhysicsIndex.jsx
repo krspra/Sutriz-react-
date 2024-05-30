@@ -9,7 +9,7 @@ const PhysicsIndex = () => {
       <Helmet><title>Physics Formulas QUIZ</title></Helmet>
       <Index
         Subject="Physics"
-        Image={<GrReactjs style={{ color: "orange" }} />}
+        Image={<GrReactjs style={{ color: "red" }} />}
       />
     </>
   );

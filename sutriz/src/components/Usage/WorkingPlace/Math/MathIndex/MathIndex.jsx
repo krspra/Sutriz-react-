@@ -9,7 +9,7 @@ const MathIndex = () => {
       <Helmet><title>Math Formulas QUIZ</title></Helmet> 
       <Index
         Subject="Math"
-        Image={<PiMathOperationsBold style={{ color: "orange" }} />}
+        Image={<PiMathOperationsBold style={{ color: "#0000ffb0" }} />}
       />
     </>
   );

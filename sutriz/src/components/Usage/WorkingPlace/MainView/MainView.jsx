@@ -5,11 +5,11 @@ import sutrizLogo from "../../../.././assets/sutrizlogo.png";
 import styles from "./MainView.module.css";
 import { IoBookmarksOutline } from "react-icons/io5";
 import { FiHome } from "react-icons/fi";
-import { MdOutlineSettingsSuggest } from "react-icons/md";
+import { IoCodeSlashSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
-import { MdDarkMode } from "react-icons/md";
 
 const MainView = () => {
+  const path=window.location.pathname
   return (
     <>
       <div style={{ height: "100%", width: "75%", flexShrink: "0" }}>
@@ -33,10 +33,10 @@ const MainView = () => {
       </div>
 
       <div id={styles.usageBottomNav}>
-      <FiHome/>
+      <FiHome style={path=="/usage/workingsection"&&{color:"orange"}}/>
       <IoBookmarksOutline/>
       <CgProfile/>
-      <MdOutlineSettingsSuggest/>
+      <IoCodeSlashSharp/>
       </div>
     </>
   );

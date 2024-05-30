@@ -161,7 +161,7 @@ const Chapter = ({Subject,Chapter}) => {
                   style={{ color: "#000000a0", height: "25px" }}
                 >{`Question${currentQuestion}`}</div>
                 <div
-                  style={{minHeight:"40px",fontSize: "20px", flexShrink: "0" }}
+                  style={{minHeight:"40px",fontSize: "17px", flexShrink: "0"}}
                 >
                   {questionData.imageSrc?<img style={{height:"80px",width:"200px"}} src={questionData.imageSrc}/>:""}
                   <MathJax dynamic>{questionData.Question}</MathJax>
@@ -193,7 +193,7 @@ const Chapter = ({Subject,Chapter}) => {
                       >
                         {option}
                       </div>
-                      <MathJax dynamic>
+                      <MathJax id={styles.question} dynamic>
                         {questionData[`opt${index + 1}`]}
                       </MathJax>
                     </div>

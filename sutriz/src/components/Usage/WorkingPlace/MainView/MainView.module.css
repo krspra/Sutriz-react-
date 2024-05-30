@@ -14,6 +14,8 @@
         align-items: center;
         position: sticky;
         top: 0px;
+        background-color: white;
+        z-index: 99;
     }
     #usageBottomNav{
         height: 60px;

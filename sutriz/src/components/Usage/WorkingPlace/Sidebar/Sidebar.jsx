@@ -3,7 +3,7 @@ import styles from "./Sidebar.module.css";
 import sutrizlogo from "../../../../assets/sutrizlogo.png";
 import { IoBookmarksOutline } from "react-icons/io5";
 import { FiHome } from "react-icons/fi";
-import { MdOutlineSettingsSuggest } from "react-icons/md";
+import { IoCodeSlashSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { MdDarkMode } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
@@ -45,7 +45,7 @@ const Sidebar = () => {
               <IoBookmarksOutline /> <span>Bookmarks</span> 
             </button>
             <button className={styles.things}>
-              <MdOutlineSettingsSuggest /> <span>Suggest Feature</span> 
+              <IoCodeSlashSharp /> <span>Suggest Feature</span> 
             </button>
             <button className={styles.things}>
               <CgProfile /> <span>Profile</span>

@@ -89,10 +89,10 @@ const Header = () => {
           </div>
 
           <ul id={styles.menu}>
-            <Link>Home</Link>
-            <Link>Guide</Link>
-            <Link>Suggest a feature</Link>
-            <Link>About us</Link>
+            <Link className={styles.navOption}>Home</Link>
+            <Link className={styles.navOption}>Guide</Link>
+            <Link className={styles.navOption}>Suggest a feature</Link>
+            <Link className={styles.navOption}>About us</Link>
           </ul>
           <div
             style={{

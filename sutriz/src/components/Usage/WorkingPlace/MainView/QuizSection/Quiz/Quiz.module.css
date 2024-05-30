@@ -3,26 +3,20 @@
     width: 40px;
 }
 #box{
-    height: 200px;
-    width: 200px;
+    height: 60px;
+    width: 95%;
     background-color: white;
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     flex-shrink: 0;
     border: 1px solid #dadae4;
-
+    display: flex;
+    gap: 5px;
+    position: relative;
+    top: 50px;
+    text-decoration: none;
 }
 
 #box:hover{
     box-shadow: 2px 2px 16px rgb(227, 224, 224);
     cursor: pointer;
-}
-@media (max-width:860px) {
-    #box{
-        height: 150px;
-        width: 150px;
-    }
-    
 }

@@ -1,49 +1,61 @@
 import React from "react";
-import Math from "./math.png";
-import Physics from "./physics.png";
-import Chemistry from "./chemistry.png";
 import styles from "./Quiz.module.css";
 import { Link } from "react-router-dom";
+import { LiaFlaskSolid } from "react-icons/lia";
+import { PiMathOperationsBold } from "react-icons/pi";
+import { GrReactjs } from "react-icons/gr";
 
 const Quiz = () => {
   const typeOfQuiz = [
-    { subject: "Math", imgUrl: Math },
-    { subject: "Physics", imgUrl: Physics },
-    { subject: "Chemistry", imgUrl: Chemistry },
+    {
+      subject: "Math",
+      img: (
+        <PiMathOperationsBold
+          style={{ color: "#0000ffb0", fontSize: "40px" }}
+        />
+      ),
+      backgroundColor: "#0000ffb0",
+    },
+    {
+      subject: "Physics",
+      img: <GrReactjs style={{ color: "red", fontSize: "40px" }} />,
+      backgroundColor: "red",
+    },
+    {
+      subject: "Chemistry",
+      img: <LiaFlaskSolid style={{ color: "#008000b3", fontSize: "40px" }} />,
+      backgroundColor: "#008000b3",
+    },
   ];
 
   return typeOfQuiz.map((item, index) => (
-    <Link to={'/usage/workingsection/'+item.subject}
+    <Link
+      to={"/usage/workingsection/" + item.subject}
       key={index}
       id={styles.box}
     >
       <div
         style={{
-          height: "50%",
-          width: "90%",
-          backgroundColor: "#FFD57F",
+          height: "60px",
+          width: "60px",
           borderRadius: "8px",
-          position: "relative",
-          top: "10px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          border:"1px solid #dadae4",
-          flexWrap:"wrap"
         }}
       >
-        <img id={styles.subjectImg} src={item.imgUrl} alt={item.subject}/>
+        {item.img}
       </div>
 
       <div
         style={{
-          height: "40%",
-          width: "90%",
+          height: "40px",
           position: "relative",
           top: "15px",
           textAlign: "center",
-          fontSize:"20px",
-          color:"#00000090",
+          fontSize: "20px",
+          lineHeight:"40px",
+          color: "#00000090",
         }}
       >
         {item.subject}

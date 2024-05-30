@@ -55,6 +55,7 @@ input:focus{
         color: white;
         font-weight: bold;
         width: 100%;
+        cursor: pointer;
 }
 #Signup:hover{
     background-color: #f3922b;
