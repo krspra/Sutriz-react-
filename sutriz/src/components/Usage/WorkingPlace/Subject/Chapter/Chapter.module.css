@@ -106,24 +106,35 @@
 .nextOrPreviousButtonOnUnActive{
     color: #0000005c;
 }
-#question{
+#choiceData{
     font-size: 20px;
+}
+#question{
+    min-height: 40px;
+    font-size: 19px;
+    flex-shrink: 0;
 }
 
 @media (max-width:700px) and (min-width:400px){
     #container{
         width:90%
     }
-    #question{
+    #choiceData{
         font-size: 15px;
+    }
+    #question{
+        font-size: 17px;
     }
     
 }
 @media (max-width:400px) {
-    #question{
-        font-size: 11px;
+    #choiceData{
+        font-size: 12px;
     }
     #container{
         width: 95%;
+    }
+    #question{
+        font-size: 15px;
     }
 }

@@ -28,7 +28,7 @@ import { MenuContextProvider } from "./Context.jsx";
 
 const token = localStorage.getItem("token");
 
-const router = createBrowserRouter([
+const myrouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -97,7 +97,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <MenuContextProvider>
     <ProfileProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={myrouter}></RouterProvider>
     </ProfileProvider>
   </MenuContextProvider>
 );

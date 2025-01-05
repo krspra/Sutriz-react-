@@ -5,8 +5,9 @@ import { Helmet } from "react-helmet";
 import styles from "./WorkingSection.module.css";
 
 const WorkingSection = () => {
-  const token = localStorage.getItem("token");
+  alert("Currently there is Question available in DEFINITE INTEGRATION, CENTER OF MASS & COLLISON chapters only.")
 
+  const token = localStorage.getItem("token");
   return (
     <>
       {token ? (
